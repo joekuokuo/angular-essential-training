@@ -6,8 +6,16 @@
 
 <!-- <h2>The Redemption</h2> -->
 <h2>{{ mediaItem.name }}</h2>
+
 <!-- <div>Watched on 1/13/2016</div> -->
-<div>{{ mediaItem.watchOn }}</div>
+
+<!-- NGIF both works the same -->
+<!-- ngIf 1 -->
+<ng-template [ngIf]="mediaItem.watchedOn"
+  ><div>Watch on {{ mediaItem.watchedOn }}</div></ng-template
+>
+<!-- ngIf 2 -->
+<!-- <div *ngIf="mediaItem.watchedOn">Watch on {{ mediaItem.watchedOn }}</div> -->
 <!-- <div>{{ wasWatched() }}</div> -->
 
 <!-- <div>Action</div> -->
