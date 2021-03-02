@@ -1,5 +1,9 @@
 <!-- angular micro syntax ngFor -->
 <section>
+  <header>
+    <div>{{ mediaItems | categoryList }}</div>
+    <br />
+  </header>
   <mw-media-item
     *ngFor="let mediaItem of mediaItems"
     [mediaItem]="mediaItem"
