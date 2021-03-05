@@ -7,6 +7,7 @@ import { MediaItemComponent } from "./media-item.component";
 import { MediaItemListComponent } from "./media-item-list.component";
 import { FavortieDirective } from "./favorite.directives";
 import { CategoryListPipe } from "./category-list.pipe";
+import { MediaItemFormComponent } from "./media-item-form.component";
 
 @NgModule({
   imports: [BrowserModule, FormsModule],
@@ -16,6 +17,7 @@ import { CategoryListPipe } from "./category-list.pipe";
     MediaItemListComponent,
     FavortieDirective,
     CategoryListPipe,
+    MediaItemFormComponent,
   ],
   bootstrap: [AppComponent],
 })
