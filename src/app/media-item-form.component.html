@@ -39,8 +39,9 @@
         s
         formControlName="year"
       />
-      <div *ngIf="form.get('year').hasError('year')" class="error">
-        Year must be between 1900 and 2100
+      <div *ngIf="form.get('year').errors as yearErrors" class="error">
+        Year must be between {{ yearErrors.year.min }} and
+        {{ yearErrors.year.max }}
       </div>
     </li>
   </ul>
