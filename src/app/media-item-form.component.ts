@@ -7,6 +7,8 @@ import {
   FormBuilder,
 } from "@angular/forms";
 
+import { MediaItemService } from "./media-item.services";
+
 @Component({
   selector: "mw-media-item-form",
   templateUrl: "./media-item-form.component.html",
@@ -16,7 +18,10 @@ export class MediaItemFormComponent implements OnInit {
   form: FormGroup;
 
   // To use the property in the constructer, add a private in front of the argument
-  constructor(private formBuilder: FormBuilder) {}
+  constructor(
+    private formBuilder: FormBuilder,
+    private mediaItemService: MediaItemService
+  ) {}
 
   ngOnInit() {
     this.form = this.formBuilder.group({
@@ -55,5 +60,6 @@ export class MediaItemFormComponent implements OnInit {
 
   onSubmit(mediaItem) {
     console.log(mediaItem);
+    this.mediaItemService.add(mediaItem);
   }
 }

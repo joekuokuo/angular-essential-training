@@ -1,3 +1,9 @@
+import { Injectable } from "@angular/core";
+
+// With this declaration Angular will know this service is provided to the root of the app. We can delete the import and provider statement in the app.module.ts
+@Injectable({
+  providedIn: "root",
+})
 export class MediaItemService {
   mediaItems = [
     {

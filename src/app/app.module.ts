@@ -9,7 +9,6 @@ import { MediaItemListComponent } from "./media-item-list.component";
 import { FavortieDirective } from "./favorite.directives";
 import { CategoryListPipe } from "./category-list.pipe";
 import { MediaItemFormComponent } from "./media-item-form.component";
-import { MediaItemService } from "./media-item.services";
 
 @NgModule({
   imports: [BrowserModule, ReactiveFormsModule],
@@ -22,7 +21,6 @@ import { MediaItemService } from "./media-item.services";
     MediaItemFormComponent,
   ],
   bootstrap: [AppComponent],
-  providers: [MediaItemService],
   // create a new service and provide it to the service
 })
 export class AppModule {}
