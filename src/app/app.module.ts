@@ -10,6 +10,10 @@ import { FavortieDirective } from "./favorite.directives";
 import { CategoryListPipe } from "./category-list.pipe";
 import { MediaItemFormComponent } from "./media-item-form.component";
 
+const lookupLists = {
+  mediums: ["Movies", "Series"],
+};
+
 @NgModule({
   imports: [BrowserModule, ReactiveFormsModule],
   declarations: [
@@ -21,6 +25,11 @@ import { MediaItemFormComponent } from "./media-item-form.component";
     MediaItemFormComponent,
   ],
   bootstrap: [AppComponent],
-  // create a new service and provide it to the service
+  providers: [
+    {
+      provide: "lookupListToken",
+      useValue: lookupLists,
+    },
+  ],
 })
 export class AppModule {}
